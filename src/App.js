@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {useSelector} from 'react-redux'
+import TodoCart from './component/TodoCart';
+import AddTodo from './component/AddTodo';
 
 function App() {
-  return (
+  const todoList = useSelector(state => state.todos)
+
+
+     return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {    console.log(todoList)
+}
+      <AddTodo/>
+      {
+      todoList.map(todo => <TodoCart key={todo.id} todo={todo} />)
+      }
     </div>
   );
 }
