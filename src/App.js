@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       {    console.log(todoList)
 }
-      <AddTodo/>
+      <AddTodo />
       {
       todoList.map(todo => <TodoCart key={todo.id} todo={todo} />)
       }

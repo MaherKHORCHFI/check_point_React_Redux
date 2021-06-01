@@ -1,4 +1,4 @@
-import { ADD_TODO, DELETE_TODO,COMPLETE_TODO,EDITABLE,EDIT_TODO } from "../constant/actionTypes";
+import { ADD_TODO, DELETE_TODO,COMPLETE_TODO,EDITABLE,EDIT_TODO, COMPLITED,INCOMPLITED} from "../constant/actionTypes";
 
 
 
@@ -35,6 +35,7 @@ export const TodoReducer = (state=initialtState, action) =>{
           todo.id === action.paramComplete
             ? { ...todo, isCompleted: !todo.isCompleted }
             : todo
+            // { ...todo, isCompleted: false }
         )
       }
 
@@ -55,6 +56,27 @@ export const TodoReducer = (state=initialtState, action) =>{
           todo.id === action.paramEditId
             ? { ...todo, text: action.paramEditText, editable : false }
             : todo
+        )
+      };
+
+
+      case COMPLITED :
+      return {
+        ...state,
+        todos: state.todos.filter((todo) =>
+          todo.isCompleted === true
+            // ? { ...todo, text: action.paramEditText, editable : false }
+            // : todo
+        )
+      };
+
+      case INCOMPLITED :
+      return {
+        ...state,
+        todos: state.todos.filter((todo) =>
+          todo.isCompleted === false
+          
+            
         )
       };
         default: return state

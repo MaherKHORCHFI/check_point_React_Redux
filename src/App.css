@@ -1,4 +1,4 @@
-body {
+/* body {
     background-color: #9266ff;
 }
 
@@ -7,5 +7,82 @@ body {
     min-height: 500px;
     width: 400px;
     margin: 40px auto;
+} */
+
+
+
+/* AddTodo css */
+body,
+.panel {
+    background-color: rgba(73, 70, 47, 1);
+
+    font-family: 'Eagle Lake', cursive;
+    text-align: center;
+    font-weight: 400;
+}
+body {
+    /* background-image: url("https://assets.codepen.io/780593/hobbit.jpg"); */
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.App {
+    position: relative;
+    margin: 30px auto auto;
+    height: 500px;
+    width: 1000px;
+}
+#taskApp {
+    background: rgba(96, 116, 78, 1);
+    border-radius: 20px;
+    border: 5px solid rgba(96, 116, 78, 1);
+    border-bottom: 1px;
+}
+.panel {
+    border-radius: 20px;
+    border: 1px solid rgba(96, 116, 78, 1);
+}
+
+h1,
+h2,
+span,
+th {
+    color: midnightblue;
+
+}
+
+.taskDone {
+    text-decoration: line-through;
+}
+
+.btn-primary {
+    text-align: center;
+    color: #fff;
+    background-color: rgba(176, 150, 111, 1);
+
+    border-color: rgba(96, 116, 78, 1);
+    border-radius: 15px;
+    margin-right: 5px;
+    text-align: center;
+
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: rgba(171, 172, 87, 1);
+
+    border-color: #B99E57;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+}
+.btn-danger:hover {
+    background: #FFF07C;
+    border-color: #FFF07C;
+}
+
+th,
+span {
+    text-align: center;
+    font-size: 15px;
 }
 

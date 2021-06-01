@@ -1,9 +1,10 @@
-import { ADD_TODO, DELETE_TODO, COMPLETE_TODO, EDITABLE, EDIT_TODO} from "../constant/actionTypes"
+import { ADD_TODO, DELETE_TODO, COMPLETE_TODO, EDITABLE, EDIT_TODO, COMPLITED, INCOMPLITED} from "../constant/actionTypes"
 
 export  const addTodo = (newTodo) =>{
     return {
         type:ADD_TODO,
-        paramAdd: newTodo
+        paramAdd: newTodo,
+        
     }
 
 }
@@ -38,4 +39,20 @@ export const editTodo = (id,textEditable) => {
     };
 };
 
+export const done = (id,isCompleted)=>{
+    return {
+        type : COMPLITED,
+        paramComplitedId : id,
+        paramComplitedTask : isCompleted
+
+    }
+}
+
+export const notDone = (id,isCompleted)=>{
+    return {
+        type : INCOMPLITED,
+        paramComplitedId : id,
+        paramComplitedTask : isCompleted
+    }
+}
 
